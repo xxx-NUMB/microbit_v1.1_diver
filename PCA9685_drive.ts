@@ -489,10 +489,10 @@ namespace PCA9685_drive {
         for (let i = 0; i < 100; i++)  // make the calibration take about 10 seconds
         {
             if (i < 25 || i >= 75) {
-                Run(Dir.turnLeft, 100)
+                Run(Dir.turnLeft, 10)
             }
             else {
-                Run(Dir.turnRight, 100)
+                Run(Dir.turnRight, 10)
             }
 
             // reads all sensors 100 times
