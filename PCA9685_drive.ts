@@ -12,15 +12,15 @@ enum Motors {
 
 enum Servos {
     //% block="servo1"
-    servo1 = 0xB,
+    servo1 = 11,
     //% block="servo2"
-    servo2 = 0xC,
+    servo2 = 12,
     //% block="servo3"
-    servo3 = 0xD,
+    servo3 = 13,
     //% block="servo4"
-    servo4 = 0xE,
+    servo4 = 14,
     //% block="servo5"
-    servo5 = 0xF,
+    servo5 = 15,
 }
 
 enum Leds {
@@ -125,7 +125,7 @@ namespace PCA9685_drive {
 
     function initPCA9685(): void {
         i2cwrite(PCA9685_ADDRESS, MODE1, 0x00)
-        setFreq(500);
+        setFreq(50);
         setPwm(0, 0, 4095);
         for (let idx = 1; idx < 16; idx++) {
             setPwm(idx, 0, 0);
